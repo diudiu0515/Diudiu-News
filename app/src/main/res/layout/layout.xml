@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="10sp"
+        android:gravity="left"
+        android:hint="搜索你想要的内容"
+        android:inputType="text"
+        android:padding="30dp"
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/search_type_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/search_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="关键词" />
+
+        <RadioButton
+            android:id="@+id/search_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日期" />
+
+        <RadioButton
+            android:id="@+id/search_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分类" />
+
+        <Button
+            android:id="@+id/search_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="确定" />
+    </RadioGroup>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/news_firstpage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:foreground="?selectableItemBackground" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:drawableTop="@drawable/firstpage"
+            android:text="首页"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:drawableTop="@drawable/newslist"
+            android:text="新闻分类"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:drawableTop="@drawable/mine"
+            android:text="我的"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+

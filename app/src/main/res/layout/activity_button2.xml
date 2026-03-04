@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Button2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btn_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="前往全部分类"
+            android:background="#89CFF0"/>
+
+        <include
+            android:id="@+id/category_selection_list"
+            layout="@layout/category_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:id="@+id/category_selection_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+<!--            <Button-->
+<!--                android:id="@+id/finance"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="财经" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/military"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="军事"-->
+<!--                android:visibility="gone"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/sports"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="体育" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/education"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="教育" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/cars"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="汽车" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/entertainment"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="娱乐" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/technology"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="科技" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/health"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="健康"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/society"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="社会" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/culture"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="文化" />-->
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/news_firstpage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66ff"
+                android:drawableTop="@drawable/firstpage"
+                android:text="首页"
+                android:textSize="20sp"
+                android:elevation="8dp"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66ff"
+                android:drawableTop="@drawable/newslist"
+                android:text="新闻分类"
+                android:textSize="20sp"
+                android:elevation="8dp"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66ff"
+                android:drawableTop="@drawable/mine"
+                android:text="我的"
+                android:textSize="20sp"
+                android:elevation="8dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

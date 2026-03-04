@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Button3">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="top"
+        android:gravity="center"
+        android:text="diudiu news"
+        android:textSize="60sp"
+        android:textColor="#FFF"
+        android:background="#89CFF0"/>
+
+    <Button
+        android:id="@+id/loveList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的收藏"
+        android:gravity="left"
+        android:textSize="30sp"
+        android:drawableLeft="@drawable/star"
+        android:drawablePadding="5dp"
+        android:background="#66ccff"
+        android:padding="8sp"
+        android:elevation="4dp"/>
+
+    <Button
+        android:id="@+id/recordList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="历史记录"
+        android:gravity="left"
+        android:textSize="30sp"
+        android:drawableLeft="@drawable/historyrecord"
+        android:drawablePadding="5dp"
+        android:background="#66ccff"
+        android:padding="8sp"
+        android:elevation="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:drawableTop="@drawable/firstpage"
+            android:text="首页"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:drawableTop="@drawable/newslist"
+            android:text="新闻分类"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#66ff"
+            android:text="我的"
+            android:drawableTop="@drawable/mine"
+            android:textSize="20sp"
+            android:elevation="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
